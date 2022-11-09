@@ -35,43 +35,49 @@ public class Prova {
                 for(int i = 0; i < vetTemperatura.length; i++){
                     double tempAntiga = vetTemperatura[i];
                     vetTemperatura[i] = obj.celsiusFarenheit(vetTemperatura[i]);
-                    System.out.print("Temperatura de origem " + tempOrigem + ": " + tempAntiga + "°C");
-                    System.out.println(" | Temperatura transformada " + tempTransformada + ": " + vetTemperatura[i] + "°F");
+                    System.out.printf("Temperatura de origem %S: %.2f°C", tempOrigem, tempAntiga);
+                    System.out.printf(" | Temperatura transformada %S: %.2f°F", tempTransformada, vetTemperatura[i]);
+                    System.out.println("");
                 }
             }else if("celsius".equals(tempOrigem) && "kelvin".equals(tempTransformada)){
                 for(int i = 0; i < vetTemperatura.length; i++){
                     double tempAntiga = vetTemperatura[i];
                     vetTemperatura[i] = obj.celsiusKelvin(vetTemperatura[i]);
-                    System.out.print("Temperatura de origem " + tempOrigem + ": " + tempAntiga + "°C");
-                    System.out.println(" | Temperatura transformada " + tempTransformada + ": " + vetTemperatura[i] + "°K");
+                    System.out.printf("Temperatura de origem %S: %.2f°C", tempOrigem, tempAntiga);
+                    System.out.printf(" | Temperatura transformada %S: %.2f°K", tempTransformada, vetTemperatura[i]);
+                    System.out.println("");
                 }
             }else if("fahrenheit".equals(tempOrigem) && "celsius".equals(tempTransformada)){
                 for(int i = 0; i < vetTemperatura.length; i++){
                     double tempAntiga = vetTemperatura[i];
                     vetTemperatura[i] = obj.fahrenheitCelsius(vetTemperatura[i]);
-                    System.out.print("Temperatura de origem " + tempOrigem + ": " + tempAntiga + "°F");
-                    System.out.println(" | Temperatura transformada " + tempTransformada + ": " + vetTemperatura[i] + "°C");
+                    System.out.printf("Temperatura de origem %S: %.2f°F", tempOrigem, tempAntiga);
+                    System.out.printf(" | Temperatura transformada %S: %.2f°C", tempTransformada, vetTemperatura[i]);
+                    System.out.println("");
                 }
             }else if("fahrenheit".equals(tempOrigem) && "kelvin".equals(tempTransformada)){
                 for(int i = 0; i < vetTemperatura.length; i++){
                     double tempAntiga = vetTemperatura[i];
                     vetTemperatura[i] = obj.fahrenheitKelvin(vetTemperatura[i]);
-                    System.out.print("Temperatura de origem " + tempOrigem + ": " + tempAntiga + "°F");
-                    System.out.println(" | Temperatura transformada " + tempTransformada + ": " + vetTemperatura[i] + "°K");
+                    System.out.printf("Temperatura de origem %S: %.2f°F", tempOrigem, tempAntiga);
+                    System.out.printf(" | Temperatura transformada %S: %.2f°K", tempTransformada, vetTemperatura[i]);
+                    System.out.println("");
                 }
             }else if("kelvin".equals(tempOrigem) && "celsius".equals(tempTransformada)){
                 for(int i = 0; i < vetTemperatura.length; i++){
                     double tempAntiga = vetTemperatura[i];
                     vetTemperatura[i] = obj.kelvinCelsius(vetTemperatura[i]);
-                    System.out.print("Temperatura de origem " + tempOrigem + ": " + tempAntiga + "°K");
-                    System.out.println(" | Temperatura transformada " + tempTransformada + ": " + vetTemperatura[i] + "°C");
+                    System.out.printf("Temperatura de origem %S: %.2f°K", tempOrigem, tempAntiga);
+                    System.out.printf(" | Temperatura transformada %S: %.2f°C", tempTransformada, vetTemperatura[i]);
+                    System.out.println("");
                 }
             }else if("kelvin".equals(tempOrigem) && "fahrenheit".equals(tempTransformada)){
                 for(int i = 0; i < vetTemperatura.length; i++){
                     double tempAntiga = vetTemperatura[i];
                     vetTemperatura[i] = obj.kelvinFahrenheit(vetTemperatura[i]);
-                    System.out.print("Temperatura de origem " + tempOrigem + ": " + tempAntiga + "K");
-                    System.out.println(" | Temperatura transformada " + tempTransformada + ": " + vetTemperatura[i] + "°F");
+                    System.out.printf("Temperatura de origem %S: %.2f°K", tempOrigem, tempAntiga);
+                    System.out.printf(" | Temperatura transformada %S: %.2f°F", tempTransformada, vetTemperatura[i]);
+                    System.out.println("");
                 }
             }else{
                 System.out.println("Unidades de temperaturas inválidas!");
@@ -81,8 +87,8 @@ public class Prova {
         
         double mediaTransformadas = obj.mediaTempTransformadas(vetTemperatura);
         if(verificador == true){
-            System.out.println(" - Média das temperaturas inicias " + "(" + tempOrigem + "): " + mediaIniciais);
-            System.out.println(" - Média das temperaturas transformadas " + "(" + tempTransformada +"): " + mediaTransformadas);
+            System.out.printf(" - Média das temperaturas inicias (%S): %.2f", tempOrigem, mediaIniciais);
+            System.out.printf(" - Média das temperaturas transformadas (%S): %.2f", tempTransformada, mediaTransformadas);
         }
     }
     
